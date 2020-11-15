@@ -1,0 +1,10 @@
+{
+    "DEBUG_LOG": true,
+    "DISCORD_TOKEN": "token-here",
+    "MYSQL_DATABASE": "diamond_bot",
+    "MYSQL_USER": "root",
+    "MYSQL_PASSWORD": "",
+    "MYSQL_HOST": "0.0.0.0",
+    "MYSQL_PORT": 3306,
+    "COMMAND_PREFIX": "!"
+}

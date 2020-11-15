@@ -1,0 +1,14 @@
+name: Discord Updates
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Discord Commits
+        uses: Sniddl/discord-commits@v1.2
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          embed: '{ "thumbnail": { "url": "https://i.imgur.com/NhgAFng.png" }, "title": "{{ commit.title }}", "description": "{{ commit.description }}", "color": 2867879, "footer": { "icon_url": "https://i.imgur.com/NhgAFng.png", "text": "LOSDEV.es" } }'
